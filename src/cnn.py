@@ -12,10 +12,11 @@ class CNN(nn.Module):
             nn.ReLU(),
             nn.Conv2d(64, 64, 1, stride=1),
             nn.ReLU(),
-            nn.Flatten(),
             
         )
         self.networkLinear = nn.Sequential(
+            
+            nn.Flatten(),
             nn.Linear(self.get_feature_size(input_shape), 512),
             nn.ReLU(),
             nn.Linear(512, action_space),

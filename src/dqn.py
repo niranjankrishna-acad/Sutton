@@ -5,6 +5,7 @@ from src.cnn import CNN
 from collections import deque
 import random
 import numpy as np
+
 device = torch.device("cpu")
 class Agent:
   def __init__(self, input_shape, action_space, batch_size, replay_buffer_length, gamma=0.99, learning_rate=1e-3, epsilon=0.9):
